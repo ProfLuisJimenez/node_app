@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const secretKey = '123tamarindo'; 
+const secretKey = process.env.secretKey;
 
 const validarToken = (req, res, next) => {
     const token = req.cookies.token; 

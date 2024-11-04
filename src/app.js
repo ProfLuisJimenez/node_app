@@ -1,4 +1,5 @@
 // Elementos comunes que necesita la aplicación para utilizar funciones de las librerias
+const enviroment = require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
