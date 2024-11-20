@@ -5,7 +5,7 @@ const router = Router();
 router.get("/ver", validarToken, async (req, res) => {
     try {
         const token = req.cookies.token;
-        const respuestaServidor = await fetch('http://localhost:3000/api/list', {
+        const respuestaServidor = await fetch(`${process.env.apiRoute}/list`, {
             method: 'get',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -34,7 +34,7 @@ router.post("/registrar", validarToken, async (req, res) => {
     
     try {
         const token = req.cookies.token;
-        const respuestaServidor = await fetch('http://localhost:3000/api/add', {
+        const respuestaServidor = await fetch(`${process.env.apiRoute}/add`, {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`,

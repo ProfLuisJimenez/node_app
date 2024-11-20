@@ -11,8 +11,13 @@ Instalar framework express y librerias:
 Ejecutar con comando
 - npm run dev
 
-## Configuración
-
+## Configuración de .env
+# PUERTO
+PORT=
+# CLAVE_SECRETA
+secretKey=
+# Ruta de API
+apiRoute=
 
 ## Contribuciones
 - Nataly

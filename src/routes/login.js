@@ -14,7 +14,7 @@ router.get("/login", validarToken, (req, res) => {
 router.post("/login", validarToken, async (req, res) => {
   const { id, password } = req.body;
   try {
-      const response = await fetch('http://localhost:3000/api/auth', {
+      const response = await fetch(`${process.env.apiRoute}/auth`, {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
